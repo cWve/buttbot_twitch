@@ -12,3 +12,6 @@ streamelements
 streamlabs
 titlechange_bot
 vjbotardo
+conejomvlo
+zyrwoot
+eclipseofthemind
