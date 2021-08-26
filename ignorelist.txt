@@ -1,6 +1,4 @@
 jtv
 nightbot
 xanbot
-mooboteclipseofthemind
-zyrwoot
-conejomvlo
+moobot
