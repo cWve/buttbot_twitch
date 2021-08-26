@@ -2,3 +2,13 @@ jtv
 nightbot
 xanbot
 moobot
+supibot
+scriptorex
+trichompbot
+betnotifier
+noires_bot
+icecreamdatabase
+streamelements
+streamlabs
+titlechange_bot
+vjbotardo
