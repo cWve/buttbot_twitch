@@ -318,10 +318,10 @@ sub handle_channel_command {
         $self->say(channel => $channel, body => ":(");
         return 1;
     } elsif ($cmd eq 'yes') {
-	$self->say(channel => $channel, body => "FrankerZ");
+	$self->say(channel => $channel, body => ":D");
 	return 1;
     } elsif ($cmd eq 'why') {
-	$self->say(channel => $channel, body => "EvilFetus");
+	$self->say(channel => $channel, body => "o_o");
 	return 1;
     } elsif ($cmd eq 'buttabout') {
 	$self->say(channel => $channel, body => "I'm buttbot! I say butt! Visit me at twitch.tv/buttsbot for commands and stuff. (by pinguino age 6)");
