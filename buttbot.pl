@@ -347,46 +347,8 @@ sub handle_channel_command {
 	#Instead of adding an auth system that works on Twitch (where there's no PMs)
 	#I hard-coded my nick here because I'm a good programmer
 	#If you're gonna use this bot, you need to fix this
-if($channel eq '#buttsbot'){
-    if ($cmd eq 'join' && $who eq 'mynick') {
-        my ($arg_chan, $arg_rem) = _parse_channel($args);
-        if (defined $arg_chan) {
-            if ($self->in_channel($arg_chan)) {
-		$self->say(channel => $channel, body => "I'm already in that channel!");
-	    } else {
-                $self->join_channel($arg_chan);
-                $self->say(channel => $channel, body => "Joining!");
-            }
-        } else {
-            $self->say(channel => $channel, body => "Gonna need a channel name.");;
-        }
-    } elsif ($cmd eq 'leave' && $who eq 'mynick') {
-        my ($arg_chan, $arg_msg) = _parse_channel($args);
-        if (defined $arg_chan) {
- #           if (!$self->in_channel($arg_chan)) {
-  #               $self->say(channel => $channel, body => "I'm not in that channel!");
-   #         } else {
-                $self->leave_channel($arg_chan, $arg_msg);
-                 $self->say(channel => $channel, body => "Leaving!");
-#            }
-        } else {
-             $self->say(channel => $channel, body => "Gonna need a channel name.");
-        }
-    } elsif ($cmd eq 'joinme') {
-	if ($self->in_channel("#" . $who)) {
-	    $self->say(channel => $channel, body => "I'm already in your channel!");
-	} else {
-	    $self->join_channel("#" . $who);
-	    $self->say(channel => $channel, body => "Joining! :3");
-	}
-   } elsif ($cmd eq 'leaveme') {
-#	if (!$self->in_channel("#" . $who)) {
-#	     $self->say(channel => $channel, body => "I'm not in your channel!");
-#	} else {
-	    $self->leave_channel("#" . $who);
-	    $self->say(channel => $channel, body => "Leaving! 3:");
-#	}
-    } elsif ($cmd eq 'reload') {
+if($channel eq '#fabzeef' && $who eq 'collapsingwave'){
+    if ($cmd eq 'reload') {
         $self->load_config(1);
          $self->say(channel => $channel, body => "Reloaded!");
     } elsif ($cmd eq 'friend') {
@@ -395,10 +357,10 @@ if($channel eq '#buttsbot'){
     } elsif ($cmd eq 'unfriend') {
 	$self->friend_set(lc($args), 0);
 	$self->say(channel => $channel, body => "Friend unset :(");
-    } elsif ($cmd eq 'enemy') {
+    } elsif ($cmd eq 'ignore') {
 	$self->enemy_set(lc($args), 1);
 	$self->say(channel => $channel, body => "Ignore set! >:[");
-    } elsif ($cmd eq 'unenemy') {
+    } elsif ($cmd eq 'unignore') {
 	$self->enemy_set(lc($args), 0);
 	$self->say(channel => $channel, body => "Ignore unset :^I");
     }
