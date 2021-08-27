@@ -347,7 +347,7 @@ sub handle_channel_command {
 	#Instead of adding an auth system that works on Twitch (where there's no PMs)
 	#I hard-coded my nick here because I'm a good programmer
 	#If you're gonna use this bot, you need to fix this
-if($who eq 'collapsingwave'){
+if($who eq 'collapsingwave' || $who eq 'fabzeef'){
     if ($cmd eq 'reload') {
         $self->load_config(1);
          $self->say(channel => $channel, body => "Reloaded!");
